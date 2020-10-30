@@ -1,0 +1,355 @@
+html,
+div,
+body,
+canvas {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-app-region: drag;
+    background: black;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    overflow: hidden;
+}
+
+
+#container {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    text-align: center;
+}
+
+splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0vh;
+    border: none;
+    outline: none;
+    background: url(../images/painting.jpg);
+    background-size: 100vw 100vh;
+    background-color: black;
+    opacity: 1.0;
+    z-index: 1009;
+    -webkit-app-region: no-drag;
+}
+
+crosshairs {
+    position: absolute;
+    top: 45vw;
+    left: 45vh;
+    width: 10vw;
+    height: 20vh;
+    border-radius: 0vh;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/crosshairs.png);
+    background-size: 10vw 20vh;
+    background-color: transparent;
+    opacity: 1;
+    z-index: 1116;
+    pointer-events: none;
+    -webkit-app-region: no-drag;
+}
+
+palette {
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    width: 8vw;
+    height: 100vh;
+    border-radius: 0vh;
+    border: none;
+    border-width: thin;
+    outline: none;
+    background-size: 100% 100%;
+    opacity: 1.0;
+    z-index: 1005;
+    -webkit-app-region: no-drag;
+}
+
+toolbar {
+    position: absolute;
+    top: 0vh;
+    left: 92vw;
+    width: 8vw;
+    height: 100vh;
+    border-radius: 0vh;
+    border: none;
+    border-width: thin;
+    outline: none;
+    background-size: 100% 100%;
+    background-color: whitesmoke;
+    opacity: 1.0;
+    z-index: 1005;
+    -webkit-app-region: no-drag;
+}
+
+toolbar2 {
+    position: absolute;
+    top: 0vh;
+    left: 84vw;
+    width: 8%;
+    height: 100%;
+    border-radius: 0vh;
+    border: inset;
+    border-width: thin;
+    outline: none;
+    background-size: 100% 100%;
+    background-color: black;
+    opacity: 1.0;
+    z-index: 1005;
+    -webkit-app-region: no-drag;
+}
+
+
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0vh;
+    border: none;
+    outline: none;
+    background: url(../images/menu.jpg);
+    background-size: 100% 100%;
+    background-color: white;
+    opacity: 1.0;
+    z-index: 1001;
+    -webkit-app-region: no-drag;
+}
+
+canvas2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0vh;
+    border: none;
+    outline: none;
+    background: url();
+    background-size: 100% 100%;
+    background-color: black;
+    opacity: 1.0;
+    z-index: 1001;
+    -webkit-app-region: no-drag;
+}
+
+back {
+    position: absolute;
+    top: 2vh;
+    left: 2.5vw;
+    width: 6vw;
+    height: 7.5vh;
+    border-radius: 0vh;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/home.png);
+    background-size: 100% 100%;
+    opacity: 0.8;
+    z-index: 1007;
+    -webkit-app-region: no-drag;
+}
+
+choosePic {
+    position: absolute;
+    top: 21vh;
+    left: 30.5vw;
+    width: 38vw;
+    height: 40vh;
+    border-radius: 2vh;
+    border: groove;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/fun.png);
+    background-color: white;
+    background-size: 100% 100%;
+    opacity: 1.0;
+    z-index: 999;
+    -webkit-app-region: no-drag;
+}
+
+fun1 {
+    position: absolute;
+    top: 81vh;
+    left: 92.75vw;
+    width: 6vw;
+    height: 7vh;
+    border-radius: 0vh;
+    border: groove;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/fun1.png);
+    background-size: 6vw 7vh;
+    opacity: 1.0;
+    z-index: 1006;
+    -webkit-app-region: no-drag;
+}
+
+buttonL {
+    position: absolute;
+    top: 38.5vh;
+    left: 21vw;
+    width: 8vw;
+    height: 10vh;
+    border-radius: 0vh;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/left.png);
+    background-size: 100% 100%;
+    opacity: .8;
+    z-index: 994;
+    index: 0;
+    -webkit-app-region: no-drag;
+}
+
+buttonL:hover {
+    opacity: 1.0;
+}
+
+buttonR {
+    position: absolute;
+    top: 38.5vh;
+    left: 71vw;
+    width: 8vw;
+    height: 10vh;
+    border-radius: 0vh;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/right.png);
+    background-size: 100% 100%;
+    opacity: .8;
+    z-index: 994;
+    index: 0;
+    -webkit-app-region: no-drag;
+}
+
+buttonR:hover {
+    opacity: 1.0;
+}
+
+gobutton {
+    position: absolute;
+    top: 60vh;
+    left: 71vw;
+    width: 8vw;
+    height: 10vh;
+    border-radius: 0vh;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/plus.png);
+    background-size: 100% 100%;
+    opacity: 0.9;
+    z-index: 994;
+    -webkit-app-region: no-drag;
+}
+
+gobutton:hover {
+    opacity: 1.0;
+}
+
+
+button0 {
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 0vh;
+    border: outset;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/1.png);
+    background-size: 20vw 20vh;
+    opacity: 0.8;
+    z-index: 1000;
+    -webkit-app-region: no-drag;
+}
+
+button0:hover {
+    opacity: 1.0;
+}
+
+button2 {
+    position: absolute;
+    top: 20vh;
+    left: 55vw;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 0vh;
+    border: outset;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/3.png);
+    background-size: 20vw 20vh;
+    opacity: 0.8;
+    z-index: 1000;
+    -webkit-app-region: no-drag;
+}
+
+button2:hover {
+
+    opacity: 1.0;
+}
+
+button1 {
+    position: absolute;
+    top: 47vh;
+    left: 25vw;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 0vh;
+    border: outset;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/2.png);
+    background-size: 20vw 20vh;
+    opacity: 0.8;
+    z-index: 1000;
+    -webkit-app-region: no-drag;
+}
+
+button1:hover {
+    opacity: 1.0;
+}
+
+button3 {
+    position: absolute;
+    top: 47vh;
+    left: 55vw;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 0vh;
+    border: outset;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/4.png);
+    background-size: 20vw 20vh;
+    opacity: 0.8;
+    z-index: 1000;
+    -webkit-app-region: no-drag;
+}
+
+button3:hover {
+    opacity: 1.0;
+}
